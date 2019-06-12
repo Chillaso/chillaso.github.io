@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Mediumish Template for Jekyll
+title: About me
 permalink: /about
-comments: true
 ---
 
 <div class="row justify-content-between">

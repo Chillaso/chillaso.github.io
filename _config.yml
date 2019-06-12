@@ -1,12 +1,11 @@
 # Site
-#name: "Carlos Chilla"
-#title: "Carlos Chilla"
-#description: "Blog about Software stuffs, mainly Java-based stuffs"
+name: "Carlos Chilla"
+title: "Carlos Chilla"
+description: "Blog about Software stuffs, mainly Java-based stuffs"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/logo.png'
 baseurl: /home
 #google_analytics: 'UA-46278016-1'
-disqus: 'demowebsite'
 #mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
 permalink: /:title/
@@ -28,7 +27,6 @@ authors:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-feed
   - jekyll-seo-tag
   - jekyll-archives
     
