@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
 title: Carlos Chilla
+markdown: kramdown
 description: Carlos Chilla personal blog page. Software content specially Java based stuffs.
 permalink: /blog/:year/:month/:day/:title
