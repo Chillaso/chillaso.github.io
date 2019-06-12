@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 title: Carlos Chilla
 description: Carlos Chilla personal blog page. Software content specially Java based stuffs.
+permalink: /blog/:year/:month/:day/:title
