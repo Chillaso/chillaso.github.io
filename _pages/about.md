@@ -7,16 +7,16 @@ permalink: /about
 <div class="row justify-content-between">
 <div class="col-md-8 pr-5">
 
-<p>This website is built with Jekyll and Mediumish template for Jekyll. It's for demonstration purposes, no real content can be found. Mediumish template for Jekyll is compatible with Github pages, in fact even this demo is created with Github Pages and hosted with Github.</p>
+<p>Hello! I'm Carlos García González, also knows as Carlos Chilla or Chilla, maybe you can find me in some darkness places as Chillaso. My name it's too common so I must do tricky stuffs to get a cool username in popular sites.</p>
+<p>I'm Software developer at <a href="https://wwww.atsistemas.com" target="_blank">atSistemas</a> mainly working with Java technologies, last months I've been working with Spring and Kotlin, last one is my favourite language right now. I'll try to post some Kotlin projects here, We need to promote Kotlin projects in the community and focus on bring Kotlin to business and production environments.</p>
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/mediumish-jekyll-template.png" alt="jekyll template mediumish" /></p>
-<h4>Documentation</h4>
+<p> But not all is going to be passions like Software architecture, clean code, back-end APIs... There are much more! Nature is one of that stuffs I'll spend all my time. I love go to nature to walk, to climb, to take photos or just to chill out. For this reason an for much more like be a good citizen, believe in real values and principles and be critical with the reality I'm living is why <strong>I'm Scout</strong></p>
 
-<p>Please, read the docs <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">here</a>.</p>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/scout-logo-lis.jpeg" alt="scout movement" /></p>
 
 <h4>Questions or bug reports?</h4>
 
-<p>Head over to our <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Github repository</a>!</p>
+<p>Send me an <a href="mailto:carlos.chillagonzalez@gmail.com">email</a>!</p>
 
 </div>
 
@@ -25,9 +25,9 @@ permalink: /about
 <div class="sticky-top sticky-top-80">
 <h5>Buy me a coffee</h5>
 
-<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/wowthemesnet/mediumish-theme-jekyll">Mediumish <i class="fab fa-github"></i></a>.</p>
+<p>Thank you for your support! Your donation helps me to maintain and improve <a target="_blank" href="https://github.com/Chillaso/chillaso.github.io">The blog <i class="fab fa-github"></i></a>.</p>
 
-<a target="_blank" href="https://www.wowthemes.net/donate/" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/" class="btn btn-warning">Documentation</a>
+<a target="_blank" href="https://www.paypal.me/chillaso" class="btn btn-danger">Buy me a coffee</a> <a target="_blank" href="{{site.baseurl}}how-to-build-this-web" class="btn btn-warning">Documentation</a>
 
 </div>
 </div>
