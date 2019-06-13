@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Build this web"
+title:  "How to build this web"
 author: chillaso
 categories: [ tutorial ]
 tags: [html, github, tutorial]

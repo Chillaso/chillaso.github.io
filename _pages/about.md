@@ -14,7 +14,7 @@ permalink: /about
 
 <!-- (Insertar imagen de un collage con fotos haciendo cosas scout) -->
 
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/scout-logo-lis.jpeg" alt="scout movement" /></p>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/scout-logo.png" alt="scout movement" /></p>
 
 <h4>Questions or bug reports?</h4>
 
