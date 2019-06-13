@@ -8,9 +8,11 @@ permalink: /about
 <div class="col-md-8 pr-5">
 
 <p>Hello! I'm Carlos García González, also knows as Carlos Chilla or Chilla, maybe you can find me in some darkness places as Chillaso. My name it's too common so I must do tricky stuffs to get a cool username in popular sites.</p>
-<p>I'm Software developer at <a href="https://wwww.atsistemas.com" target="_blank">atSistemas</a> mainly working with Java technologies, last months I've been working with Spring and Kotlin, last one is my favourite language right now. I'll try to post some Kotlin projects here, We need to promote Kotlin projects in the community and focus on bring Kotlin to business and production environments.</p>
+<p>I'm Software developer working at <a href="https://wwww.atsistemas.com" target="_blank">atSistemas</a> mainly working with Java technologies, last months I've been working with Spring and Kotlin, last one is my favourite language right now. I'll try to post some Kotlin projects here, We need to promote Kotlin projects in the community and focus on bring Kotlin to business and production environments.</p>
 
-<p> But not all is going to be passions like Software architecture, clean code, back-end APIs... There are much more! Nature is one of that stuffs I'll spend all my time. I love go to nature to walk, to climb, to take photos or just to chill out. For this reason an for much more like be a good citizen, believe in real values and principles and be critical with the reality I'm living is why <strong>I'm Scout</strong></p>
+<p> But not all is going to be passions like Software architecture, clean code, back-end APIs... There are much more! Nature is one of that stuffs I'll spend all my time. I love go to nature to walk, to climb, to take photos or just to chill out. For this reason an for much more like be a good citizen, believe in real values and principles and be critical with the reality I'm living is why <strong>I'm Scout</strong>. When I'm not coding, I'm educating children to be better persons and fend for themselves, joining on international meetings or being a Youth Spokeperson.</p>
+
+<!-- (Insertar imagen de un collage con fotos haciendo cosas scout) -->
 
 <p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/scout-logo-lis.jpeg" alt="scout movement" /></p>
 
