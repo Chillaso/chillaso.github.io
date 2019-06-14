@@ -4,7 +4,7 @@ title:  "How to build this web"
 author: chillaso
 categories: [ tutorial ]
 tags: [html, github, tutorial]
-image: assets/images/12.jpg
+image: assets/images/bricks.jpeg
 featured: true
 [//]: <> Sirve para quitarlo del all y no tener la noticia dos veces
 hidden: false
