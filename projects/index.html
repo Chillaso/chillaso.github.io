@@ -1,10 +1,9 @@
 ---
 title: "Projects"
 layout: default
-permalink: "/projects.html"
 ---
 
-{% if page.url == "/projects" %}
+{% if page.url == "/projects/" %}
 
 <!-- Featured
 ================================================== -->
@@ -27,8 +26,6 @@ permalink: "/projects.html"
     </div>
 </section>
 
-{% endif %}
-
 <!-- Posts Index
 ================================================== -->
 <section class="recent-posts">
@@ -40,14 +37,18 @@ permalink: "/projects.html"
     </div>
 
     <div class="row listrecent">
-        {% for post in paginator.posts %}
-            {% if post.categories contains 'project' %} 
-                {% include postbox.html %}
-            {%endif%}
-        {% endfor %}
+
+    {% for post in site.categories['project'] %}
+
+        {% include postbox.html %}
+
+    {% endfor %}
+
     </div>
 
 </section>
+
+{% endif %} 
 
 <!-- Pagination
 ================================================== -->
