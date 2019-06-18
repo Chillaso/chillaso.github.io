@@ -43,12 +43,9 @@ title: Home
         {% for post in paginator.posts %}
 
             {% unless post.categories contains 'project' %} 
-                {% if post.featured == true %}
-
-                    {% include postbox.html %}
-
-                {% endif %}
+                {% include postbox.html %}
             {%endunless%}
+
         {% endfor %}
 
     </div>
