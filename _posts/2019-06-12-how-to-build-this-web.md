@@ -2,7 +2,7 @@
 layout: post
 title:  "How to build this web"
 author: chillaso
-categories: [ tutorial ]
+categories: [ post, tutorial ]
 tags: [html, github, tutorial]
 image: assets/images/bricks.jpeg
 featured: true
