@@ -38,4 +38,4 @@ Simply like this! with this little configuration we have a static website deploy
 
 ## Jekyll Themes
 
-Actually Github Pages uses under the hood Jekyll to render your website, and even you can choose some ~~ugly~~ predefined themes. But I recommend visit [this website](https://jekyllthemes.io/) or [this one](http://jekyllthemes.org/ ]) and search some cool theme.
+Actually Github Pages uses under the hood Jekyll to render your website, and even you can choose some ~~ugly~~ predefined themes. But I recommend visit [this website](https://jekyllthemes.io/) or [this one](http://jekyllthemes.org/]) and search some cool theme. These themes have predefined plugins like Disqus, sharing, Search Lunr... This has a lot of facilities, because we have an out-of-box website with cool CSS.
