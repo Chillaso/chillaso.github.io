@@ -38,4 +38,25 @@ Simply like this! with this little configuration we have a static website deploy
 
 ## Jekyll Themes
 
-Actually Github Pages uses under the hood Jekyll to render your website, and even you can choose some ~~ugly~~ predefined themes. But I recommend visit [this website](https://jekyllthemes.io/) or [this one](http://jekyllthemes.org/]) and search some cool theme. These themes have predefined plugins like Disqus, sharing, Search Lunr... This has a lot of facilities, because we have an out-of-box website with cool CSS.
+Actually Github Pages uses under the hood Jekyll to render your website, and even you can choose some ~~ugly~~ predefined themes. But I recommend visit [this website](https://jekyllthemes.io/) or [this one](http://jekyllthemes.org/]) and search some cool theme. These themes have predefined plugins like Disqus, sharing, Search Lunr... This has a lot of facilities, because we have an out-of-box website with cool CSS. This theme is *[Mediumish](https://www.wowthemes.net/mediumish-free-jekyll-template/)*. 
+
+>Note, take care deciding a theme becase must be github pages compatible in order to deploy in our repo.
+
+But, how can I install a custom theme on my website? Well in my case is very simple, just clone the mediumish repo and copy paste all files and folders in your project folder. Now, you can commit and start editing and customizing. I'm not going to dive in customization options because every theme is different and I guess you know something about HTML and CSS.
+
+Did you notice that you are deploying every time in master to see changes? So boring yah? Okey, let's see how to deploy in your localhost.
+
+## Jekyll works in local!
+
+Well, this is so fucking simple, thanks to *Docker*, if you know nothing about Docker, check it as soon as possible because there are several companies and technologies which use Docker in the hood, the best example is *Kubernetes*, but this is other post for this blog. We are going to use *Docker-compose*, Jekyll has an image in *Docker Hub*, so is simple like this:
+
+```yml
+jekyll:
+    image: jekyll/jekyll:3.8.5
+    command: jekyll serve --force_polling
+    ports:
+        - 4000:4000
+    volumes:
+        - .:/srv/jekyll
+```
+If you know something about docker-compose, you know that we are defining a service wich image is from user jekyll and his image is jekyll in 3.8.5 version. We are initializing the container with ```jekyll serve --force_polling``` and binding 4000 localhost port to c 4000 container port. Then we are mounting a binding volume from ``` ./``` folder to ``` /srv/jekyll ```. With this approach we reuse to install Ruby on Rails, its gems, jekyll... I usually run ``` docker-compose up -d ``` for start the server, ``` docker-compose restart ```when several changes happens, and ``` docker-compose logs -f ``` when need to know what is happening
