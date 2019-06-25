@@ -2,8 +2,8 @@
 layout: post
 title:  "How to build this web"
 author: chillaso
-categories: [ post, tutorial ]
-tags: [html, github, tutorial]
+categories: [ tutorial ]
+tags: [jekyll, github pages, tutorial]
 image: assets/images/bricks.jpeg
 featured: true
 hidden: false
@@ -46,7 +46,7 @@ But, how can I install a custom theme on my website? Well in my case is very sim
 
 Did you notice that you are deploying every time in master to see changes? So boring yah? Okey, let's see how to deploy in your localhost.
 
-## Jekyll works in local!
+## Jekyll works in my machine
 
 Well, this is so fucking simple, thanks to *Docker*, if you know nothing about Docker, check it as soon as possible because there are several companies and technologies which use Docker in the hood, the best example is *Kubernetes*, but this is other post for this blog. We are going to use *Docker-compose*, Jekyll has an image in *Docker Hub*, so is simple like this:
 
@@ -59,4 +59,17 @@ jekyll:
     volumes:
         - .:/srv/jekyll
 ```
-If you know something about docker-compose, you know that we are defining a service wich image is from user jekyll and his image is jekyll in 3.8.5 version. We are initializing the container with ```jekyll serve --force_polling``` and binding 4000 localhost port to c 4000 container port. Then we are mounting a binding volume from ``` ./``` folder to ``` /srv/jekyll ```. With this approach we reuse to install Ruby on Rails, its gems, jekyll... I usually run ``` docker-compose up -d ``` for start the server, ``` docker-compose restart ```when several changes happens, and ``` docker-compose logs -f ``` when need to know what is happening
+If you know something about docker-compose, you know that we are defining a service wich image is from user jekyll and his image is jekyll in 3.8.5 version. We are initializing the container with ```jekyll serve --force_polling``` and binding 4000 localhost port to c 4000 container port. Then we are mounting a binding volume from ``` ./``` folder to ``` /srv/jekyll ```. With this approach we reuse to install Ruby on Rails, its gems, jekyll... I usually run ``` docker-compose up -d ``` for start the server, ``` docker-compose restart ``` when several changes happens, and ``` docker-compose logs -f ``` when need to know what is happening.
+
+Now we can visualize hot changes in ```localhost:4000``` and start developing safety. You can create a new branch called *develop* and push your development code there, or you might want to use other workflow for git, like git-flow, take the best for you!
+
+## Jekyll 
+
+Jekyll is a static site generator, you can edit your content in your favourite markup language and thanks to some tech like *Liquid* you can render your page easily. After building this blog I notice that Jekyll is very useful for certain pages, but other complex pages maybe you want to choose a CMS or other tools, for example [Netlify](https://www.netlify.com/) or [Contentful](https://www.contentful.com/). The main reason for choosing Jekyll is that is 100% compatible with Github Pages what means you have free hosting. 
+
+How Jekyll works? Well it use a specific [directory structure](https://jekyllrb.com/docs/structure/) you can see more details in their documentation, in my case I've the next structure:
+
+<img src="/assets/images/repo3.png"/>
+
+Big difference here is *_pages* and *projects*. 
+* **_pages** are used to hold static root pages which haven't 
