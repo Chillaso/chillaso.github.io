@@ -1,5 +1,10 @@
 # Carlos Chilla - Change Log
 
+## 2019-06-27, v1.2.1
+- Added how to build this web
+- Improve favicon quality
+- Developing message 
+
 ## 2019-06-18, v1.1.0
 - Added project page
 - Changed about page
