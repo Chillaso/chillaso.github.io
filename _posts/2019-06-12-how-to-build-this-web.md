@@ -4,7 +4,7 @@ title:  "How to build this web"
 author: chillaso
 categories: [ tutorial ]
 tags: [jekyll, github pages, tutorial]
-image: assets/images/bricks.jpeg
+image: assets/images/how-to-build-this-web/bricks.jpeg
 featured: true
 hidden: false
 ---
@@ -16,13 +16,13 @@ First at all, we need to know something called [GitHub Pages](https://pages.gith
 
 Let's start creating a **new repo named as: nameyouwant.github.io** 
 
-<img src="/assets/images/repo1.png"/>
+<img src="/assets/images/how-to-build-this-web/repo1.png"/>
 
 *Actually the name could be chillaso.github.io, but I have one created before. Notice we are choosing a public repository, only if you have pro version of github you can choose it as private*
 
 Then we can check it out our repository settings, if we scroll down will see a section like this
 
-<img src="/assets/images/repo2.png"/>
+<img src="/assets/images/how-to-build-this-web/repo2.png"/>
 
 After this, we simply clone the repo, create an index.html and push it to master. After this we'll be able to see our new incredible page! Let's try it.
 
@@ -68,7 +68,7 @@ Jekyll is a static site generator, you can edit your content in your favourite m
 
 How Jekyll works? Well it use a specific [directory structure](https://jekyllrb.com/docs/structure/) you can see more details in their documentation, in my case I've the next structure:
 
-<img src="/assets/images/repo3.png"/>
+<img src="/assets/images/how-to-build-this-web/repo3.png"/>
 
 Big difference here is *_pages* and *projects*. 
 * **_pages** are used to hold static root pages which haven't templates, or don't need to be reused. 
@@ -94,7 +94,7 @@ title:  "How to build this web"
 author: chillaso
 categories: [ tutorial ]
 tags: [jekyll, github pages, tutorial]
-image: assets/images/bricks.jpeg
+image: assets/images/how-to-build-this-web/bricks.jpeg
 featured: true
 hidden: false
 ---
