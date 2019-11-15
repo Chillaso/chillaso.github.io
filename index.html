@@ -14,13 +14,11 @@ title: Home
     <div class="row">
 
     {% for post in site.posts %}
-        {% unless post.categories contains 'project' %} 
             {% if post.featured == true %}
 
                 {% include featuredbox.html %}
 
             {% endif %}
-        {% endunless %}
     {% endfor %}
 
     </div>
@@ -42,11 +40,9 @@ title: Home
 
         {% for post in paginator.posts %}
 
-            {% unless post.categories contains 'project' %} 
 
                 {% include postbox.html %}
                 
-            {%endunless%}
 
         {% endfor %}
 
