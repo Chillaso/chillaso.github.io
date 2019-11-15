@@ -1,5 +1,10 @@
 # Carlos Chilla - Change Log
 
+## 2019-11-14, v1.3.0
+- Fix erros
+- New Kotlin post
+- All projects in the main page
+
 ## 2019-06-27, v1.2.1
 - Added how to build this web
 - Improve favicon quality
