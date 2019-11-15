@@ -5,7 +5,7 @@ author: chillaso
 categories: [ tutorial ]
 tags: [jekyll, github pages, tutorial]
 image: assets/images/how-to-build-this-web/bricks.jpeg
-featured: true
+featured: false
 hidden: false
 ---
 
