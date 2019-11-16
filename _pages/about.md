@@ -8,13 +8,11 @@ permalink: /about
 <div class="col-md-8 pr-5">
 
 <p>Hello! I'm Carlos García González, also knows as Carlos Chilla or Chilla, maybe you can find me in some darkness places as Chillaso. My name it's too common so I must do tricky stuffs to get a cool username in popular sites.</p>
-<p>I'm Software developer working at <a href="https://www.atsistemas.com" target="_blank">atSistemas</a> mainly working with Java technologies, last months I've been working with Spring and Kotlin, last one is my favourite language right now. I'll try to post some Kotlin projects here, We need to promote Kotlin projects in the community and focus on bring Kotlin to business and production environments.</p>
+<p>I'm Software developer working at <a href="https://www.atsistemas.com" target="_blank">atSistemas</a> mainly working with Java technologies. I spend a lot of time developing back-end APIs trying to always keep in mind Uncle Bob knowleadge, beeing always as clean as possible when writting code. I love known about software patterns, desing, achitecture and refactoring, last months I was reading Robert C Martin and Martin Fowler books.</p>
 
-<p> But not all is going to be passions like Software architecture, clean code, back-end APIs... There are much more! Nature is one of that stuffs I'll spend all my time. I love go to nature to walk, to climb, to take photos or just to chill out. For this reason an for much more like be a good citizen, believe in real values and principles and be critical with the reality I'm living is why <strong>I'm Scout</strong>. When I'm not coding, I'm educating children to be better persons and fend for themselves, joining on international meetings or being a Youth Spokeperson.</p>
+<p> But not all is going to be software, there are much more! Live in nature is one of my passions, I really love trekking and camping without any material, only with my scouting skills, climb the biggest mountain to take fantastic phothos and be amazed by the incredible landscapes we have in Spain. Usually, when I go to nature, I go as scout, if you know something about scout, forget it, it's a big lie, we don't sell cookies and don't help grandmas to cross the street. We are an educational movement based on nature contact and small groups lifes, I help children and young people from 9 to 21 years to be better persons, be more critical with society they live and teach them we have to left world better than we found it.</p>
 
-<!-- (Insertar imagen de un collage con fotos haciendo cosas scout) -->
-
-<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/scout-logo.png" alt="scout movement" /></p>
+<p class="mb-5"><img class="shadow-lg" src="{{site.baseurl}}/assets/images/about-me.png" alt="Some good photos" /></p>
 
 <h4>Questions or bug reports?</h4>
 
