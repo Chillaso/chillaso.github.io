@@ -1,5 +1,8 @@
 # Carlos Chilla - Change Log
 
+## 2019-11-16, v1.3.1
+- Fix error in post
+
 ## 2019-11-14, v1.3.0
 - Fix erros
 - New Kotlin post
