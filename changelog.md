@@ -1,6 +1,6 @@
 # Carlos Chilla - Change Log
 
-## 2019-11-16, v1.4.0
+## 2019-11-16, v1.4.1
 - Fix error in post
 - Fix error in featured.
 - Change about page
