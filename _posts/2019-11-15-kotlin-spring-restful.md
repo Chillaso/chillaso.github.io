@@ -5,7 +5,7 @@ author: chillaso
 categories: [ project ]
 tags: [kotlin, spring, restful]
 image: assets/images/kotlin-spring-restful/kotlin.jpg
-featured: true
+featured: false
 hidden: false
 ---
 
