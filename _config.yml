@@ -1,7 +1,7 @@
 # Site
 name: "Carlos Chilla"
 title: "Carlos Chilla"
-description: "Blog about Software stuffs, mainly Java-based stuffs"
+description: "Blog about Software stuffs"
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 
@@ -22,7 +22,7 @@ authors:
     web: https://chillaso.github.io
     # Link for follow button
     twitter: https://github.com/Chillaso
-    description: "Software developer at @atSistemas. I love programming and back-end technologies. Self-educated and Java lover."
+    description: "Software developer at @atSistemas. I love learn new stuffs. Pragmatic and self-educated "
 
 # Plugins
 plugins:
