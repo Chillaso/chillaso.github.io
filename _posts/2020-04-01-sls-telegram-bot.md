@@ -118,7 +118,7 @@ module.exports.covidApp = async event =>
 	return {statusCode: 200}
 }
 ```
-Easy, uh? **It's very important return {statusCode:200} our whatever code when finished, if you don't do it properly your lambda function would never finish and you would have to prepare your credit card to be fucked.**
+Easy, uh? **It's very important return {statusCode:200} or whatever code when finished, if you don't do it properly your lambda function would never finish and you would have to prepare your credit card to be fucked.**
 
 At this point we have a module, telegram.js, which handle parsing telegram event and send message callback to our telegram bot. In the other hand we have our handler.js entrypoint which runs as a controller in a MVC architecture and return success code when finished. **Simple as that, we've our backend finished**
 
@@ -210,7 +210,7 @@ Now open your code and in whereever you want create a constant like this
 ```javascript
 SEND_MESSAGE_URI: `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage`,
 ```
-Actually, Serverless is who is goind to set TELEGRAM_TOKEN depends on the stage you are deploying your function as we have see in `serverless.yml` configuration.
+Actually, Serverless is who is going to set TELEGRAM_TOKEN depends on the stage you are deploying your function as we have see in `serverless.yml` configuration.
 
 ### Deploying and linking back-end
 It's time to deploy, we have our bot created and our telegram token, we have our function and our serverless configuration... but... what happen with AWS? Let's see how do a minimal configuration to deploy serverless functions, very simple. Let's go to AWS console > IAM > Users.

@@ -1,5 +1,7 @@
 # Carlos Chilla - Change Log
 
+## 2020-04-05, v1.5.1
+- Fix english stuffs
 ## 2020-04-04, v1.5.0
 - PR of security and dependencies accepted
 - New post about telegram serverless bot
