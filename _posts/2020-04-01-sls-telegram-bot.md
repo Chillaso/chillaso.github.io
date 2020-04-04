@@ -22,7 +22,7 @@ Hello everybody, Chillaso is back! In this difficult days we're living during CO
 * Conclusions and resources
 
 ### Environment installation
-Serverless philosophy let us be agnostic of cloud and language, this is a big potential because we can decide what language is better for what solution. I've decided to use Node.js because two reason. First one is because I want to learn more of javascript and was so bored of web javascript, I need in my life backend javascript, thanks god for Node.js. The second one is because I wanted some fast to develop, and my Golang skills are so basic right now, so the time-to-market was so weigth.
+Serverless philosophy let us be agnostic of cloud and language, this is a big potential because we can decide what language is better for what solution. I've decided to use Node.js because two reason. First one is because I want to learn more of javascript and was so bored of web javascript, I need in my life backend javascript, thanks god for Node.js. The second one is because I wanted some fast to develop, and my Golang skills are too basic right now, so the time to develop would be so long.
 
 Well, let start from a very basic installation. First at all, we're going to install [NVM](https://github.com/nvm-sh/nvm), a version manager for Node, I like it because it's very easy to install and let us change node versions very easily. 
 
@@ -50,7 +50,7 @@ npm install serverless-offline --save-dev
 ```
 
 ### Coding our function
-Our `handler.js` is going to be our entrypoint. We are going to see my backend logic, if you don't mind about this point, just up to serverless configuration section. Here I'm going to show how crawl a web with cheerio, and do http request with bent. **Don't jump the part of telegram code, how to manage message and send it.**
+Our `handler.js` is going to be our entrypoint. We are going to see my backend logic, if you don't mind about this point, just jump to serverless configuration section. Here I'm going to show how crawl a web with cheerio, and do http request with bent. **Don't jump the part of telegram code, how to manage message and send it.**
 
 #### Telegram module and managing messages
 Let's see our telegram entrypoint, this is where the telegram bot event is received and processed. But not the real entrypoint, this is my telegram.js file.
@@ -118,7 +118,7 @@ module.exports.covidApp = async event =>
 	return {statusCode: 200}
 }
 ```
-Easy, uh? **It's very important return {statusCode:200} our whatever code when finished, if you don't do it properly your lambda function would never finish and youw would prepare your credit card to be fucked.**
+Easy, uh? **It's very important return {statusCode:200} our whatever code when finished, if you don't do it properly your lambda function would never finish and you would have to prepare your credit card to be fucked.**
 
 At this point we have a module, telegram.js, which handle parsing telegram event and send message callback to our telegram bot. In the other hand we have our handler.js entrypoint which runs as a controller in a MVC architecture and return success code when finished. **Simple as that, we've our backend finished**
 
@@ -164,7 +164,7 @@ provider:
   name: aws
   runtime: nodejs12.x
 ```
-> Here you defined your cloud provider and your runtime environment. Another important point is:
+> Here define your cloud provider and your runtime environment. Another important point is:
 
 ```yml
   environment:
@@ -200,7 +200,7 @@ custom:
 This step it's very simple, just open Telegram and search for *@BotFather*
 <img src="/assets/images/sls-telegram-bot/botfather.jpeg" style="width: 100%"/>
 
-Type and follow the instructions:
+Type /newbot and follow the instructions:
 <img src="/assets/images/sls-telegram-bot/netbow.png" style="width: 100%"/>
 
 Copy your telegram token and export it in your console, or export in .bashrc or .zshrc as `TELEGRAM_TOKEN`
@@ -250,7 +250,7 @@ Test your bot!
 <img src="/assets/images/sls-telegram-bot/testbot.png" style="width: 100%"/>
 
 ### Conclusions and resources
-Well, thanks for reading until final. We've learn how to deploy a serverless function to AWS and attach to Telegram Bot. There are a lot of missing details like creating telegram commands, the backend code and an AWS deployed services. Was a very basic guide of deploying function fast and easily, from this point we can improve a lot of our code or use more AWS services as DynamoDB which let us store `chat.id` and send later messages to all chat who start our bot, making "subscription bots" possible.
+Well, thanks for reading until final. We've learn how to deploy a serverless function to AWS and attach to Telegram Bot. There are a lot of missing details like creating telegram commands, the backend code and an AWS deployed services. Was a very basic guide of deploying function fast and easily, from this point we can improve a lot of our code or use more AWS services as DynamoDB which let us store `chat.id` variable to send laterly messages to all chat who start our bot, making "subscription bots" possible.
 
 You can find my Covid project [here](https://github.com/Chillaso/Covid-Telegram-Serverless) it's very very basic, and probably there are a lot of errors, but was for personal use and as a proof of concept, perhaps I'll improve it and learn more things about it or migrate it to Golang. 
 
