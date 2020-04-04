@@ -1,5 +1,9 @@
 # Carlos Chilla - Change Log
 
+## 2020-04-04, v1.4.0
+- PR of security and dependencies accepted
+- New post about telegram serverless bot
+
 ## 2019-11-14, v1.3.0
 - Fix erros
 - New Kotlin post

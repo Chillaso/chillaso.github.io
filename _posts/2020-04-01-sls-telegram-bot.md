@@ -158,18 +158,20 @@ plugins:
   - serverless-offline
 ```
 
-Important point here are:
+An important point here is:
 ```yml
 provider:
   name: aws
   runtime: nodejs12.x
 ```
-Here you defined your cloud provider and your runtime environment. Another important point is:
+> Here you defined your cloud provider and your runtime environment. Another important point is:
+
 ```yml
   environment:
     TELEGRAM_TOKEN: ${self:custom.myEnvironment.TELEGRAM_TOKEN.${self:custom.myStage}}
 ```
-Here we are setting our `TELEGRAM_TOKEN` variable, which let us point to our bot, we'll see more abot this later.
+> Here we are setting our `TELEGRAM_TOKEN` variable, which let us point to our bot, we'll see more abot this later.
+
 ```yaml
 functions:
   covid:
@@ -180,7 +182,7 @@ functions:
           method: post
 	  cors: true
 ```
-Here we are defining a `covid` Api Gateway which has a handler found it in handler.covidApp function and accept a HTTP POST in http://your-api-endpoint/covid path.
+> Here we are defining a `covid` Api Gateway which has a handler found it in handler.covidApp function and accept a HTTP POST in http://your-api-endpoint/covid path.
 
 This isn't a big important part of our develop, but it's very interesting has at least 2 environments deployed, which means 2 telegram bots, which means 2 telegram tokens. So to manage this we create two different deployment configuration, `prod` and `dev` and do it possible thanks to Serverless Variables.
 ```yml
@@ -191,16 +193,19 @@ custom:
       prod: ${env:TELEGRAM_TOKEN}
       dev: ${env:TELEGRAM_TOKEN_DEV}
 ```
-If we want to deploy our function in `dev stage` we run `sls deploy --stage dev`
+>If we want to deploy our function in `dev stage` we run `sls deploy --stage dev`
 
 ### Creating a Telegram bot
 
-This step it's very simple, just open Telegram and search for @BotFather
+This step it's very simple, just open Telegram and search for *@BotFather*
 <img src="/assets/images/sls-telegram-bot/botfather.jpeg" style="width: 100%"/>
+
 Type and follow the instructions:
-<img src="/assets/images/sls-telegram-bot/newbot.png" style="width: 100%"/>
+<img src="/assets/images/sls-telegram-bot/netbow.png" style="width: 100%"/>
+
 Copy your telegram token and export it in your console, or export in .bashrc or .zshrc as `TELEGRAM_TOKEN`
 <img src="/assets/images/sls-telegram-bot/created.png" style="width: 100%"/>
+
 Now open your code and in whereever you want create a constant like this
 ```javascript
 SEND_MESSAGE_URI: `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage`,
@@ -209,7 +214,9 @@ Actually, Serverless is who is goind to set TELEGRAM_TOKEN depends on the stage 
 
 ### Deploying and linking back-end
 It's time to deploy, we have our bot created and our telegram token, we have our function and our serverless configuration... but... what happen with AWS? Let's see how do a minimal configuration to deploy serverless functions, very simple. Let's go to AWS console > IAM > Users.
+
 <img src="/assets/images/sls-telegram-bot/aws.png" style="width: 100%"/>
+
 Create an user with programmatic access and download your credentials. Then, create, if you don't have yet, .aws folder in your home directory. Go into it and create `credentials` file. You've to write something like this:
 ```
 [default]
@@ -224,25 +231,30 @@ It's deploy time! First you have to deploy your function with
 sls deploy --stage dev
 ```
 This will output something like this:
+
 <img src="/assets/images/sls-telegram-bot/slsoutput.png" style="width: 100%"/>
+
 As you can see Serverless create a lot of things under the hood, using services like CloudFormation, API Gateway and S3.
 
 Now copy your entrypoint URL and attach to your telegram bot, let him know where your backend is running this:
 ```bash
 curl --request POST --url https://api.telegram.org/bot$TELEGRAM_TOKEN_DEV/setWebhook --header 'content-type: application/json' --data '{"url": "https://your-api-endpoint/dev/covid"}'
 ```
-you'll get something like
+>you'll get something like
 ```json
 {"ok":true,"result":true,"description":"Webhook is already set"}
 ```
 
 Test your bot!
+
 <img src="/assets/images/sls-telegram-bot/testbot.png" style="width: 100%"/>
 
 ### Conclusions and resources
 Well, thanks for reading until final. We've learn how to deploy a serverless function to AWS and attach to Telegram Bot. There are a lot of missing details like creating telegram commands, the backend code and an AWS deployed services. Was a very basic guide of deploying function fast and easily, from this point we can improve a lot of our code or use more AWS services as DynamoDB which let us store `chat.id` and send later messages to all chat who start our bot, making "subscription bots" possible.
 
 You can find my Covid project [here](https://github.com/Chillaso/Covid-Telegram-Serverless) it's very very basic, and probably there are a lot of errors, but was for personal use and as a proof of concept, perhaps I'll improve it and learn more things about it or migrate it to Golang. 
+
+If you want to contribute to COVID telegram bot, don't think it so much, do it, I'll appreciate it so much :)
 
 I hope you enjoy and have learn something, thanks you so much for reading,
 
