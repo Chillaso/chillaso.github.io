@@ -210,21 +210,21 @@ Now open your code and in whereever you want create a constant like this
 ```javascript
 SEND_MESSAGE_URI: `https://api.telegram.org/bot${process.env.TELEGRAM_TOKEN}/sendMessage`,
 ```
-Actually, Serverless is who is going to set TELEGRAM_TOKEN depends on the stage you are deploying your function as we have see in `serverless.yml` configuration.
+Actually, Serverless is who is going to set TELEGRAM_TOKEN depends on the stage you are deploying your function as we have seen in `serverless.yml` configuration.
 
 ### Deploying and linking back-end
 It's time to deploy, we have our bot created and our telegram token, we have our function and our serverless configuration... but... what happen with AWS? Let's see how do a minimal configuration to deploy serverless functions, very simple. Let's go to AWS console > IAM > Users.
 
 <img src="/assets/images/sls-telegram-bot/aws.png" style="width: 100%"/>
 
-Create an user with programmatic access and download your credentials. Then, create, if you don't have yet, .aws folder in your home directory. Go into it and create `credentials` file. You've to write something like this:
+Create an user with programmatic access and download his credentials. Then, create, if you don't have yet, .aws folder in your home directory. Go into it and create `credentials` file. You've to write something like this:
 ```
 [default]
 aws_access_key_id = ACCESS_KEY
 aws_secret_access_key = SECRET_ACCESS_KEY
 region = eu-west-1
 ```
-If you are a bit confused with this check [AWS official guide to create an user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) and [configuration and credential file setting](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
+If you are a bit confused with this, check [AWS official guide to create an user](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html) and [configuration and credential file setting](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
 
 It's deploy time! First you have to deploy your function with
 ```bash
@@ -250,12 +250,12 @@ Test your bot!
 <img src="/assets/images/sls-telegram-bot/testbot.png" style="width: 100%"/>
 
 ### Conclusions and resources
-Well, thanks for reading until final. We've learn how to deploy a serverless function to AWS and attach to Telegram Bot. There are a lot of missing details like creating telegram commands, the backend code and an AWS deployed services. Was a very basic guide of deploying function fast and easily, from this point we can improve a lot of our code or use more AWS services as DynamoDB which let us store `chat.id` variable to send laterly messages to all chat who start our bot, making "subscription bots" possible.
+Well, thanks for reading until final. We've learned how to deploy a serverless function to AWS and attach to Telegram Bot. There are a lot of missing details like creating telegram commands, the backend code and an AWS deployed services. It was a very basic guide of deploying function fast and easy, from this point we can improve a lot of our code or use more AWS services as DynamoDB which let us store `chat.id` variable to send laterly messages to all chat who started our bot, making "subscription bots" possible.
 
-You can find my Covid project [here](https://github.com/Chillaso/Covid-Telegram-Serverless) it's very very basic, and probably there are a lot of errors, but was for personal use and as a proof of concept, perhaps I'll improve it and learn more things about it or migrate it to Golang. 
+You can find my Covid project [here](https://github.com/Chillaso/Covid-Telegram-Serverless) it's very very basic, and probably there are a lot of errors, but it's for personal use and as a proof of concept, perhaps I'll improve it and learn more things about it or migrate it to Golang. 
 
 If you want to contribute to COVID telegram bot, don't think it so much, do it, I'll appreciate it so much :)
 
-I hope you enjoy and have learn something, thanks you so much for reading,
+I hope you enjoy and have learned something, thanks you so much for reading,
 
 See you soon, exit(0);
