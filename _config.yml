@@ -15,14 +15,14 @@ permalink: /:title/
 authors:
   chillaso:
     name: chillaso
-    display_name: Carlos Chilla    
+    display_name: Carlos Chilla
     avatar: 'assets/images/avatar.jpeg'
     email: carlos.chillagonzalez@gmail.com
     # Link for name label
     web: https://chillaso.github.io
     # Link for follow button
     twitter: https://github.com/Chillaso
-    description: "Backend developer at Admiral Group Plc. I love learn new stuffs. Pragmatic and self-educated "
+    description: "Solutions Architect at Everis. I love learn new stuffs. Pragmatic and self-educated "
 
 # Plugins
 plugins:
