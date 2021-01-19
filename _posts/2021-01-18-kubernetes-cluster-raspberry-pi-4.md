@@ -9,7 +9,7 @@ featured: true
 hidden: false
 ---
 
-Hello everybody, Chillaso here! This time I'm here to show you my next project, build a [Kubernetes](https://kubernetes.io/) cluster in two [Raspberry pi 4](https://www.raspberrypi.org/). The best suitable way to do this would be with another extra Pi, cause we're going to use [MicroK8S]() to set up Kubernetes and it needs a node (Raspberry pi) to place master node and the other ones to workers, but is not the case.
+Hello everybody, Chillaso here! This time I'm here to show you my next project, build a [Kubernetes](https://kubernetes.io/) cluster in two [Raspberry pi 4](https://www.raspberrypi.org/). The best suitable way to do this would be with another extra Pi, cause we're going to use [MicroK8S]() to set up Kubernetes and it needs a node (Raspberry pi) to place master node and the other ones going to workers, but is not the case.
 
 ## Setup
 First at all, I'm going to give you my hardware setup:
@@ -19,7 +19,7 @@ First at all, I'm going to give you my hardware setup:
 * [Cluster rack](https://www.amazon.es/Raspberry-Ventilador-refrigeraci%C3%B3n-disipador-acr%C3%ADlico/dp/B07J9VMNBL/ref=sr_1_2?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3A1KTHGWAS8O0&dchild=1&keywords=cluster+raspberry+pi&qid=1610996148&sprefix=cluster+rasp%2Caps%2C229&sr=8-2)
 * x2 Ethernet cable
 
-I think, a good microSD is a very important point here, is our hard drive, the better SD is the better performance we have. The other important part are fans, which are included in the cluster ruck, I've test it without fans and the temperature was more or less 50-60º, with them temperature average is 30º, very important if you don't want to fire your house.
+I think, a good microSD is a very important point here, is our hard drive, the better SD is the better performance we have. The other important part are fans, which are included in the cluster ruck, I've test it without fans and the temperature was more or less 50-60º, with them, temperature average is 30º, very important if you don't want to fire your house.
 
 About software, we're going to use the [official Ubuntu server for Raspberry pi](https://ubuntu.com/download/raspberry-pi/thank-you?version=20.04.1&architecture=server-arm64+raspi) version 64-bit, cause MicroK8s doesn't work with 32-bit arch. We're going to install with [Raspberry Pi Imager](https://www.raspberrypi.org/software/). 
 
@@ -27,3 +27,9 @@ Okay, you've bought everything, your Aliexpress packages finally have arrive one
 1. Set up first the microSD, before build anything else. If you are lost follow [this tutorial](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#1-overview)
 2. Building your cluster, notice about which plate is the first and which is the latest. 
 3. When connecting fans check first how to do it, you've a schema [here](https://miro.medium.com/max/700/1*pcfeGQr_mUJrXDFDrdKMww.png). Pins goes in number 4 and 6
+4. I prefer go by wired connection, but if you can't I suggest configure WiFi when you finish your SO installation, you can discover how [here](https://ubuntu.com/tutorials/how-to-install-ubuntu-on-your-raspberry-pi#3-wifi-or-ethernet)
+
+## Hands-on
+Awesome! we've everything setted up, now it's time to grab our console and connect by ssh to our nodes, you can discover which is the IP of our Pi's executing this `arp -na | grep dc:a6` but I've to confess that didn't worked for me, so I login into my rounter and saw my dhcp list.
+<br>
+<img src="/assets/images/k8s-pi4/dhcp.png" style="width: 50%"/>
