@@ -1,4 +1,7 @@
-jekyll:
+version: '3.4'
+
+services:
+  jekyll:
     image: jekyll/jekyll:3.8.5
     command: jekyll serve --force_polling
     ports:
