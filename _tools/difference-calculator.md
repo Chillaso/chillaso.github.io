@@ -4,8 +4,8 @@ title:  "Percentage calculator"
 author: chillaso
 categories: [ tools ]
 tags: [tools]
-image: assets/images/how-to-build-this-web/bricks.jpeg
+image: assets/images/tools/numbers.jpg
 description: "A simple tool to calculate difference in percentages between two numbers"
 ---
 
-Hello, friend.
+<a href="https://chillaso.github.io/difference-calculator">Click here if you are not redirected</a>
