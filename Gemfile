@@ -8,4 +8,7 @@ source "https://rubygems.org"
 #
 
 # If you have any plugins, put them here!
+
 gem "github-pages", group: :jekyll_plugins
+gem "jekyll-workbox-plugin", group: :jekyll_plugins
+
