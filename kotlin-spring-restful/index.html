@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <title>RESTful API with Spring and Kotlin | Carlos Chilla</title>
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>RESTful API with Spring and Kotlin | Carlos Chilla</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="RESTful API with Spring and Kotlin" />
+<meta name="author" content="chillaso" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hi there! Chillaso here. Today we are going to see how to build a RESTful API with Kotlin and Spring Boot. This is a project I did for a Spring course in atSistemas I think could be useful for everyone who want to learn something about this irruptive language and its application out of Android projects." />
+<meta property="og:description" content="Hi there! Chillaso here. Today we are going to see how to build a RESTful API with Kotlin and Spring Boot. This is a project I did for a Spring course in atSistemas I think could be useful for everyone who want to learn something about this irruptive language and its application out of Android projects." />
+<link rel="canonical" href="https://github.com/kotlin-spring-restful/" />
+<meta property="og:url" content="https://github.com/kotlin-spring-restful/" />
+<meta property="og:site_name" content="Carlos Chilla" />
+<meta property="og:image" content="https://github.com/assets/images/kotlin-spring-restful/kotlin.jpg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-11-15T00:00:00+00:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"chillaso"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/assets/images/logo.png"},"name":"chillaso"},"description":"Hi there! Chillaso here. Today we are going to see how to build a RESTful API with Kotlin and Spring Boot. This is a project I did for a Spring course in atSistemas I think could be useful for everyone who want to learn something about this irruptive language and its application out of Android projects.","headline":"RESTful API with Spring and Kotlin","dateModified":"2019-11-15T00:00:00+00:00","datePublished":"2019-11-15T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/kotlin-spring-restful/"},"image":"https://github.com/assets/images/kotlin-spring-restful/kotlin.jpg","url":"https://github.com/kotlin-spring-restful/","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      
+  <link href="/assets/css/screen.css" rel="stylesheet">
+
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <!-- SW -->
+  <link rel="manifest" href="/manifest.json" />
+  <script type="text/javascript" src="/assets/js/main.js"></script>
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+        <img class="sitenavbar img" src="/assets/images/logo.png" alt="Carlos Chilla">
+    </a>
+    <!-- End Logo -->
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/tools.html">Tools</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/cgarciagonzalez/" target="_blank">
+                        Linkedin <i class="fab fa-linkedin-in"> </i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://github.com/Chillaso">
+                        Github <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=RESTful API with Spring and Kotlin&url=https://github.com/kotlin-spring-restful/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://github.com/kotlin-spring-restful/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/kotlin-spring-restful/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="/assets/images/avatar.jpeg" alt="Carlos Chilla">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="https://chillaso.github.io">Carlos Chilla</a><a target="_blank" href="https://github.com/Chillaso" class="btn follow">Follow</a>
+                        <span class="author-description">Software Architect working at NTT Data. I love learn new stuffs. Pragmatic and self-educated </span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">RESTful API with Spring and Kotlin</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="/assets/images/kotlin-spring-restful/kotlin.jpg" alt="RESTful API with Spring and Kotlin">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Hi there! Chillaso here. Today we are going to see how to build a RESTful API with Kotlin and Spring Boot. This is a project I did for a Spring course in <a href="https://www.atsistemas.com">atSistemas</a> I think could be useful for everyone who want to learn something about this irruptive language and its application out of Android projects.</p>
+
+<p>I was writting this article before, trying to explain all difference between Kotlin and Java, but I realized that it sucks cause of explaining Kotlin features/differences step by step was unuseful, the most important thing when learning Kotlin is not language features itself, is learning and understanding concepts under the hood. Hence, I’ll write a post for that concepts deep dive.</p>
+
+<p>So… what we’re going to learn here in this post? Well, I’ll show you good features that help us writting fast RESTful services and problems we can face up when coding Spring service with Kotlin.</p>
+
+<blockquote>
+  <p>All the code in this post can be found <a href="https://github.com/Chillaso/Curso-Spring">here</a></p>
+</blockquote>
+
+<h2 id="kotlin-constructors">Kotlin constructors</h2>
+<p>We’re gonna build a rent car API, so let’s start with one of my simple but favourite feature in Kotlin that allow write code like a thunder, I’m talking about Kotlin classes.</p>
+
+<p><img src="/assets/images/kotlin-spring-restful/data-class.png" /></p>
+
+<blockquote>
+  <p>Disclaimer: Since 2017, <strong>Spring Framework 5.x and Spring Boot 2.x allow Kotlin support.</strong> This might be a problem for legacy services, but I think updating and upgrading must be a constant in our days, so if we obvious this point, I think Java community should adapt Kotlin little by little so this is why I decided use Kotlin for this project which was Java based originally.</p>
+</blockquote>
+
+<p>As you can see, there aren’t almost templating when creating a class. If you are familiar with <a href="https://projectlombok.org/">Project Lombok</a> this is very similar to <code class="highlighter-rouge">@Data</code>, but much better. Kotlin create a final class (which means you can’t inherit from it) with getters, setters, equals, toString… and that autogenerated stuffs we usually create with our IDE, but now we have this feature free with Kotlin. If you set all the attributes as val you are just setting an attribute final, and if you define a default value for it, Kotlin will create a constructor with all of your fields and one constructor for each <code class="highlighter-rouge">val</code> attribute with default falue. So, it’s mean you have a constructor with optional params, let’s see an example:</p>
+
+<p><img src="/assets/images/kotlin-spring-restful/constructor-example.png" style="width: 100%" /></p>
+
+<h2 id="functional-style">Functional style</h2>
+<p>Another good stuff in Kotlin is functional programming style, which let us code cleaner. Java 8 did a nice try to get closer to functional style, but… you know, it’s fine, but sucks. Kotlin gives us different methods who can be applied to any object. Let’s see an example in a rest controller, it’s a very very basic example, but it’s fine to undertand the concept.</p>
+
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="k">override</span> <span class="k">fun</span> <span class="nf">findById</span><span class="p">(</span><span class="n">@PathVariable</span><span class="p">(</span><span class="s">"id"</span><span class="p">)</span> <span class="n">id</span><span class="p">:</span> <span class="n">Int</span><span class="p">):</span> <span class="n">CarDTO</span> <span class="p">=</span>
+<span class="n">service</span><span class="p">.</span><span class="n">findById</span><span class="p">(</span><span class="n">id</span><span class="p">).</span><span class="n">let</span> <span class="p">{</span> <span class="n">mapper</span><span class="p">.</span><span class="n">mapToDto</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="k">get</span><span class="p">())</span> <span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>This is cool, we have different methods for each semantic meaning, run, let, map, also… You could think that this is a better approach than Optionals in Java, and you’ll right in my opinion, but there is a <em>big deal with Spring and Kotlin: Repository.</em></p>
+
+<p>If you use Spring Data, when you are implementing your DAO, you’ll have something like:</p>
+<div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nd">@Repository</span>
+<span class="n">Interface</span> <span class="n">CarRepository</span> <span class="o">:</span> <span class="n">JpaRepository</span><span class="o">&lt;</span><span class="n">Car</span><span class="o">,</span> <span class="n">Int</span><span class="o">&gt;</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>And when you call your repository in your service layer, you expect something like:</p>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="kd">val</span> <span class="py">car</span><span class="p">:</span> <span class="n">Optional</span><span class="p">&lt;</span><span class="n">Car</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">repository</span><span class="p">.</span><span class="n">findById</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>As you can see, we’re tight to Java Optionals, and this is totally oposite to <code class="highlighter-rouge">let</code>, <code class="highlighter-rouge">map</code>, <code class="highlighter-rouge">run</code>… So, Spring it’s cool because let us implement our services with Kotlin, but is not thinked in a Kotlin way, hence, if we want to use Kotlin features we should parse our Optional to an object than can be nullable, that’s an additional step we have to implement, and Kotlin nature is be less verbose and cleaner than Java, so…</p>
+
+<h2 id="conclusions">Conclusions</h2>
+<p>To me, this things are the best parts of developing Spring MVC with Kotlin, in balance I think we win more than loss, even with that misunderstanding between Java and Kotlin, the last one piss off in Java’s mouth, clean code, more readability, less verbosity, better concepts… This is a very very very brief explanation about Kotlin and Spring, if you develop a real project you’ll be able to realize that  Kotlin has good features like <code class="highlighter-rouge">object</code> keyword, inmutability, functional programming, better OOP… I hope you want to check it out by yourself.</p>
+
+<p>If you like this brief introduction to RESTful API with Spring check the project on GitHub and study the difference between Java, and try to implement your API with Kotlin, after one or two projects later, you’ll realize that Kotlin is the new black and is the better alternative to Java.</p>
+
+<p>In other post I’m writting now, I’ll explain Kotlin concepts that could change your mind in order to adapt Kotlin in your codebase, after that we’ll be able to see and study other cool things around Kotlin ecosystem like <a href="https://arrow-kt.io/">Arrow</a>, <a href="https://kotlinlang.org/docs/reference/coroutines-overview.html">coroutines</a>, <a href="https://www.http4k.org/">http4k</a> and much more.</p>
+
+<p>Thanks for reading!</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2019-11-15">15 Nov 2019</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#project">project</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#kotlin">#kotlin</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#restful">#restful</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#spring">#spring</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            <a class="prev d-block col-md-6" href="/how-to-build-this-web/"> &laquo; How to build this web</a>
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/sls-telegram-bot/">Serverless Telegram bot &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#tutorial">tutorial (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#project">project (2)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2022 Carlos Chilla 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+<script src="/assets/js/lazyload.js"></script>
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+</body>
+
+</html>

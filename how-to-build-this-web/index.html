@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" href="/assets/images/favicon.ico">
+
+  <title>How to build this web | Carlos Chilla</title>
+
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How to build this web | Carlos Chilla</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="How to build this web" />
+<meta name="author" content="chillaso" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hello everybody! I think the best first post I can do is how to build this website, step by step. Probably this post will change in the future in order to reflect all changes in web. Hope you enjoy and learn!" />
+<meta property="og:description" content="Hello everybody! I think the best first post I can do is how to build this website, step by step. Probably this post will change in the future in order to reflect all changes in web. Hope you enjoy and learn!" />
+<link rel="canonical" href="https://github.com/how-to-build-this-web/" />
+<meta property="og:url" content="https://github.com/how-to-build-this-web/" />
+<meta property="og:site_name" content="Carlos Chilla" />
+<meta property="og:image" content="https://github.com/assets/images/how-to-build-this-web/bricks.jpeg" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-12T00:00:00+00:00" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"chillaso"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://github.com/assets/images/logo.png"},"name":"chillaso"},"description":"Hello everybody! I think the best first post I can do is how to build this website, step by step. Probably this post will change in the future in order to reflect all changes in web. Hope you enjoy and learn!","headline":"How to build this web","dateModified":"2019-06-12T00:00:00+00:00","datePublished":"2019-06-12T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://github.com/how-to-build-this-web/"},"image":"https://github.com/assets/images/how-to-build-this-web/bricks.jpeg","url":"https://github.com/how-to-build-this-web/","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      
+  <link href="/assets/css/screen.css" rel="stylesheet">
+
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <script src="/assets/js/jquery.min.js"></script>
+  <!-- SW -->
+  <link rel="manifest" href="/manifest.json" />
+  <script type="text/javascript" src="/assets/js/main.js"></script>
+</head>
+
+
+<!-- change your GA id in _config.yml -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', '', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+
+<body class="layout-post">
+	<!-- defer loading of font and font awesome -->
+	<noscript id="deferred-styles">
+		<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	</noscript>
+
+
+<!-- Begin Menu Navigation
+================================================== -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+
+    <div class="container pr-0">
+
+    <!-- Begin Logo -->
+    <a class="navbar-brand" href="/">
+        <img class="sitenavbar img" src="/assets/images/logo.png" alt="Carlos Chilla">
+    </a>
+    <!-- End Logo -->
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarMediumish">
+
+        <!-- Begin Menu -->
+
+            <ul class="navbar-nav ml-auto">
+
+                
+                <li class="nav-item">
+                
+                <a class="nav-link" href="/">Blog</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <li class="nav-item">
+                <a class="nav-link" href="/tools.html">Tools</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.linkedin.com/in/cgarciagonzalez/" target="_blank">
+                        Linkedin <i class="fab fa-linkedin-in"> </i>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" target="_blank" href="https://github.com/Chillaso">
+                        Github <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <script src="/assets/js/lunr.js"></script>
+
+
+<style>
+    .lunrsearchresult .title {color: #d9230f;}
+    .lunrsearchresult .url {color: silver;}
+    .lunrsearchresult a {display: block; color: #777;}
+    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
+    .lunrsearchresult a:hover .title {text-decoration: underline;}
+</style>
+
+
+<form class="bd-search" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <input type="text" class="form-control text-small launch-modal-search" id="lunrsearch" name="q" maxlength="255" value="" placeholder="Type and enter..."/>
+</form>
+
+<div id="lunrsearchresults">
+    <ul></ul>
+</div>
+
+<script src="/assets/js/lunrsearchengine.js"></script>
+
+            </ul>
+
+        <!-- End Menu -->
+
+    </div>
+
+    </div>
+</nav>
+<!-- End Navigation
+================================================== -->
+
+<div class="site-content">
+
+<div class="container">
+
+<!-- Content
+================================================== -->
+<div class="main-content">
+    <!-- Begin Article
+================================================== -->
+<div class="container">
+    <div class="row">
+
+        <!-- Post Share -->
+        <div class="col-md-2 pl-0">
+            <div class="share sticky-top sticky-top-offset">
+    <p>
+        Share
+    </p>
+    <ul>
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://twitter.com/intent/tweet?text=How to build this web&url=https://github.com/how-to-build-this-web/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://facebook.com/sharer.php?u=https://github.com/how-to-build-this-web/" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+            <a target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=https://github.com/how-to-build-this-web/" onclick="window.open(this.href, 'width=550,height=435');return false;">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+        </div>
+
+        <!-- Post -->
+        
+
+        <div class="col-md-9 flex-first flex-md-unordered">
+            <div class="mainheading">
+
+                <!-- Author Box -->
+                
+                <div class="row post-top-meta">
+                    <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0">
+                        
+                        <img class="author-thumb" src="/assets/images/avatar.jpeg" alt="Carlos Chilla">
+                        
+                    </div>
+                    <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
+                        <a target="_blank" class="link-dark" href="https://chillaso.github.io">Carlos Chilla</a><a target="_blank" href="https://github.com/Chillaso" class="btn follow">Follow</a>
+                        <span class="author-description">Software Architect working at NTT Data. I love learn new stuffs. Pragmatic and self-educated </span>
+                    </div>
+                </div>
+                
+
+                <!-- Post Title -->
+                <h1 class="posttitle">How to build this web</h1>
+
+            </div>
+
+            <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
+            
+            <!-- End Adsense -->
+
+            <!-- Post Featured Image -->
+            
+
+            
+            <img class="featured-image img-fluid lazyimg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="/assets/images/how-to-build-this-web/bricks.jpeg" alt="How to build this web">
+            
+
+            
+            <!-- End Featured Image -->
+
+            <!-- Post Content -->
+            <div class="article-post">
+                <!-- Toc if any -->
+                
+                <!-- End Toc -->
+                <p>Hello everybody! I think the best first post I can do is how to build this website, step by step. Probably this post will change in the future in order to reflect all changes in web. Hope you enjoy and learn!</p>
+
+<h2 id="github-pages">Github Pages</h2>
+<p>First at all, we need to know something called <a href="https://pages.github.com/">GitHub Pages</a> there is where magic occurs. Github pages host our pages and use <a href="https://en.wikipedia.org/wiki/CI/CD">CI/CD</a> to mantain the page updated. We have one page per user and the free domain is like this web, chillaso.github.io. With Github Pages we have CD, so every time we push to master, a new release is created and deployed in production.</p>
+
+<p>Let’s start creating a <strong>new repo named as: nameyouwant.github.io</strong></p>
+
+<p><img src="/assets/images/how-to-build-this-web/repo1.png" /></p>
+
+<p><em>Actually the name could be chillaso.github.io, but I have one created before. Notice we are choosing a public repository, only if you have pro version of github you can choose it as private</em></p>
+
+<p>Then we can check it out our repository settings, if we scroll down will see a section like this</p>
+
+<p><img src="/assets/images/how-to-build-this-web/repo2.png" /></p>
+
+<p>After this, we simply clone the repo, create an index.html and push it to master. After this we’ll be able to see our new incredible page! Let’s try it.</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="go">git clone https://github.com/Chillaso/chillaso.github.io.git
+cd chillaso.github.io/
+</span><span class="gp">echo "Hello world" &gt;</span><span class="o">&gt;</span> index.html
+<span class="go">git commit -am "Hello world"
+git push --set-upstream origin master
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+<p>Simply like this! with this little configuration we have a static website deployed on Github. With this little approach you can do whatever you think, but edit a whole site from scratch is so tedious, so let’s roll in something better, Jekyll.</p>
+
+<h2 id="jekyll-themes">Jekyll Themes</h2>
+
+<p>Actually Github Pages uses under the hood Jekyll to render your website, and even you can choose some <del>ugly</del> predefined themes. But I recommend visit <a href="https://jekyllthemes.io/">this website</a> or <a href="http://jekyllthemes.org/]">this one</a> and search some cool themes. These themes have predefined plugins like Disqus, sharing, Search Lunr… This has a lot of facilities, because we have an out-of-box website with cool CSS. This theme is <em><a href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish</a></em>.</p>
+
+<blockquote>
+  <p>Note, take care deciding a theme becase must be github pages compatible in order to deploy in our repo.</p>
+</blockquote>
+
+<p>But, how can I install a custom theme on my website? Well in my case is very simple, just clone the mediumish repo and copy paste all files and folders in your project folder. Now, you can commit and start editing and customizing. I’m not going to dive in customization options because every theme is different and I guess you know something about HTML and CSS.</p>
+
+<p>Did you notice that you are deploying every time in master to see changes? So boring yah? Okey, let’s see how to deploy in your localhost.</p>
+
+<h2 id="jekyll-works-in-my-machine">Jekyll works in my machine</h2>
+
+<p>Well, this is so fucking simple, thanks to <em>Docker</em>, if you know nothing about Docker, check it as soon as possible because there are several companies and technologies which use Docker in the hood, the best example is <em>Kubernetes</em>, but this is other post for this blog. We are going to use <em>Docker-compose</em>, Jekyll has an image in <em>Docker Hub</em>, so is simple like this:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="na">jekyll</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">jekyll/jekyll:3.8.5</span>
+    <span class="na">command</span><span class="pi">:</span> <span class="s">jekyll serve --force_polling</span>
+    <span class="na">ports</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">4000:4000</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+        <span class="pi">-</span> <span class="s">.:/srv/jekyll</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>If you know something about docker-compose, you know that we are defining a service wich image is from user jekyll and his image is jekyll in 3.8.5 version. We are initializing the container with <code class="highlighter-rouge">jekyll serve --force_polling</code> and binding 4000 localhost port to c 4000 container port. Then we are mounting a binding volume from <code class="highlighter-rouge">./</code> folder to <code class="highlighter-rouge">/srv/jekyll</code>. With this approach we reuse to install Ruby on Rails, its gems, jekyll… I usually run <code class="highlighter-rouge">docker-compose up -d</code> for start the server, <code class="highlighter-rouge">docker-compose restart</code> when several changes happens, and <code class="highlighter-rouge">docker-compose logs -f</code> when need to know what is happening.</p>
+
+<p>Now we can visualize hot changes in <code class="highlighter-rouge">localhost:4000</code> and start developing safety. You can create a new branch called <em>develop</em> and push your development code there, or you might want to use other workflow for git, like git-flow, take the best for you!</p>
+
+<h2 id="jekyll-structure">Jekyll structure</h2>
+
+<p>Jekyll is a static site generator, you can edit your content in your favourite markup language and thanks to some tech like <a href="https://jekyllrb.com/docs/liquid/"><em>Liquid</em></a> you can render your page easily. After building this blog I notice that Jekyll is very useful for certain pages, but other complex pages maybe you want to choose a CMS or other tools, for example <a href="https://www.netlify.com/"><em>Netlify</em></a> or <a href="https://www.contentful.com/"><em>Contentful</em></a>. The main reason for choosing Jekyll is that is 100% compatible with Github Pages what means you have free hosting.</p>
+
+<p>How Jekyll works? Well it use a specific <a href="https://jekyllrb.com/docs/structure/">directory structure</a> you can see more details in their documentation, in my case I’ve the next structure:</p>
+
+<p><img src="/assets/images/how-to-build-this-web/repo3.png" /></p>
+
+<p>Big difference here is <em>_pages</em> and <em>projects</em>.</p>
+<ul>
+  <li><strong>_pages</strong> are used to hold static root pages which haven’t templates, or don’t need to be reused.</li>
+  <li><strong>projects</strong> this folder allow us to have a separete index.html. This index is neccesary if we want a root page like the main page. If we don’t have this files separated, we can have conflicts. Remember <em>_pages</em> are used to hold static content, and our projects page is going to be used as a template.</li>
+</ul>
+
+<p>In the other hand, we have a special file named, <strong><code class="highlighter-rouge">_config.yml</code></strong> this is a very important file to Jekyll because is used to define main configuration of our site, and let us configure plugins and other stuffs. You can check my config file <a href="https://github.com/Chillaso/chillaso.github.io/blob/master/_config.yml">here</a> and the official documentation about default config file <a href="https://jekyllrb.com/docs/configuration/default/">here</a>. I think is a waste of time explain whole available configurations, they are very intuitive so I prefer you check documentation, and if you need know something special just try to google it, there are a lot of info for Jekyll and Github Pages.</p>
+
+<h2 id="edit-content">Edit content</h2>
+
+<p>Okey, now we have all concepts in our mind, now we need to come back to real world. How can I edit content and publish it? Well this is very easy, you only need to know a couple of things.</p>
+
+<p>The first one is that Jekyll use a special nomenclature to determinate what is a post, you’re going to need to allocate content under <em>_post folder</em> and then create a file like this: YYYY-MM-DD-name-what-you-want.md. As you can deduce, year, month and day need to be informed, and then whatever name you want which would be used to create your URL. For this post we have something like this: <code class="highlighter-rouge">2019-06-12-how-to-build-this-web.md</code>.</p>
+
+<p>That’s all you need to know to editing content, that, and some of Markdown language (it’s pretty simplier). But there are some tricky stuffs that you would need to know about editing content and Jekyll concepts, <strong>headers</strong></p>
+
+<h2 id="headers">Headers</h2>
+
+<p>Headers let us tell Jekyll how it has to render the page and with what info. For this post I have something like this:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span>  <span class="s2">"</span><span class="s">How</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">build</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">web"</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">chillaso</span>
+<span class="na">categories</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">tutorial</span> <span class="pi">]</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">jekyll</span><span class="pi">,</span> <span class="nv">github pages</span><span class="pi">,</span> <span class="nv">tutorial</span><span class="pi">]</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">assets/images/how-to-build-this-web/bricks.jpeg</span>
+<span class="na">featured</span><span class="pi">:</span> <span class="no">true</span>
+<span class="na">hidden</span><span class="pi">:</span> <span class="no">false</span>
+<span class="nn">---</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+<p>Let’s see:</p>
+<ul>
+  <li><strong>layout</strong>: Layout is what page under <code class="highlighter-rouge">_layouts</code> we are going to use as template of this content. In my case, post.html is my template, you can check its code <a href="https://github.com/Chillaso/chillaso.github.io/blob/master/_layouts/post.html">here</a>. Jekyll let us to inherit layouts, that’s very useful, keep in mind when develop your site.</li>
+  <li><strong>title</strong>: Very simple, which title we are going to display in the header of the page. This is used as title in our main page too.</li>
+  <li><strong>author</strong>: Author is a plugin I’ve installed, this indicates info about author that it’s defined in <code class="highlighter-rouge">_config.yml</code>.</li>
+  <li><strong>categories</strong>: Is an array that can have whatever strings you want, this is useful for makes categories in your site. We can render a page like <a href="https://chillaso.github.io/categories">this</a>.</li>
+  <li><strong>tags</strong>: Like categories, but other semantic meaning.</li>
+  <li><strong>image</strong>: I guess it isn’t necessary to explain this.</li>
+  <li><strong>featured</strong>: This help us to difference content between featured and not featured. If we have a featured content we will display in some place but not in others and viceversa.</li>
+  <li><strong>hidden</strong>: The same that featured, usually you’re going to have featured true and hidden true, or featured false and hidden false, that’s the right meaning, but sometimes you would like to mark a content as featured but display in your non-featured box too.</li>
+</ul>
+
+<p>As you can see, headers let us create extra information. Actually headers is a wrong name, <strong>Front Matter</strong> is the real name, and you can check Jekyll doc about this <a href="https://jekyllrb.com/docs/front-matter/">here</a>.</p>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<p>I hope you’ve learned how to build this web and know how to build yours. Now we know that Github Pages exists, and we can create a free site hosted on our Github account, customize that with themes and create and manage content thanks to Jekyll.</p>
+
+<p>Build this web was eight hours of work more or less. Reading post like this was probably 80% of my invested time, 20% resting was just coding and understanding how Jekylls works. Static web pages are so simple and I encourage everybody to build their own projects like this, you can learn a lot of new stuffs, enough to be manteinable and not so complex like a CMS, small projects, personal pages, simply blogs…</p>
+
+<p>Just code guys!</p>
+
+<p>Regards!</p>
+
+            </div>
+
+            <!-- Rating -->
+            
+
+            <!-- Post Date -->
+            <p>
+            <small>
+                <span class="post-date"><time class="post-date" datetime="2019-06-12">12 Jun 2019</time></span>           
+                
+                </small>
+            </p>
+
+            <!-- Post Categories -->
+            <div class="after-post-cats">
+                <ul class="tags mb-4">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/categories#tutorial">tutorial</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Categories -->
+
+            <!-- Post Tags -->
+            <div class="after-post-tags">
+                <ul class="tags">
+                    
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#github-pages">#github pages</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#jekyll">#jekyll</a>
+                    </li>
+                    
+                    <li>
+                        <a class="smoothscroll" href="/tags#tutorial">#tutorial</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            <!-- End Tags -->
+
+            <!-- Prev/Next -->
+            <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+            
+            
+            <a class="next d-block col-md-6 text-lg-right" href="/kotlin-spring-restful/">RESTful API with Spring and Kotlin &raquo; </a>
+            
+            <div class="clearfix"></div>
+            </div>
+            <!-- End Categories -->
+
+        </div>
+        <!-- End Post -->
+
+    </div>
+</div>
+<!-- End Article
+================================================== -->
+
+<!-- Review with LD-JSON, adapt it for your needs if you like, but make sure you test the generated HTML source code first: 
+https://search.google.com/structured-data/testing-tool/u/0/
+================================================== -->
+
+</div>
+    
+</div>
+
+<!-- Categories Jumbotron
+================================================== -->
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+            <div class="d-md-flex align-items-center justify-content-center h-100">
+                <h2 class="d-md-block align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+            </div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+            
+            
+                
+                    <a class="mt-1 mb-1" href="/categories#tutorial">tutorial (1)</a>
+                
+                    <a class="mt-1 mb-1" href="/categories#project">project (2)</a>
+                
+            
+            
+		</div>
+	</div>
+</div>
+
+<!-- Begin Footer
+================================================== -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                Copyright © 2022 Carlos Chilla 
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" href="https://www.wowthemes.net/mediumish-free-jekyll-template/">Mediumish Jekyll Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- End Footer
+================================================== -->
+
+</div> <!-- /.site-content -->
+
+<!-- Scripts
+================================================== -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="/assets/js/mediumish.js"></script>
+
+
+<script src="/assets/js/lazyload.js"></script>
+
+
+<script src="/assets/js/ie10-viewport-bug-workaround.js"></script> 
+</body>
+
+</html>
